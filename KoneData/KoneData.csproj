@@ -4,7 +4,6 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-    <PublishTrimmed>true</PublishTrimmed>
     <AssemblyName>KoneData</AssemblyName>
     <RootNamespace>KoneData</RootNamespace>
     <Authors>Jussi Isotalo</Authors>
