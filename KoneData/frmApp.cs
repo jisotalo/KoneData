@@ -37,6 +37,7 @@ namespace KoneData
         {
             InitializeComponent();
             treeData.Nodes.Add("Ladataan...");
+            this.Show();
 
             PopulateBrands();
         }
@@ -52,7 +53,6 @@ namespace KoneData
             {
                 var brands = await koneService.GetTractorBrands();
 
-                treeData.BeginUpdate();
                 treeData.Nodes.Clear();
 
                 brands.ForEach(brand =>
@@ -72,10 +72,6 @@ namespace KoneData
             } catch (Exception ex)
             {
                 MessageBox.Show($"Virhe hakiessa traktorimerkkejä: {ex.Message}", "Virhe", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                treeData.EndUpdate();
             }
         }
 
@@ -206,9 +202,6 @@ namespace KoneData
                 if (expandedNode.Nodes[0].Text != "Ladataan...")
                     return;
 
-
-                treeData.BeginUpdate();
-
                 if (expandedNode.Tag is TractorBrand)
                 {
                     //Brand expanded
@@ -261,10 +254,6 @@ namespace KoneData
             catch (Exception ex)
             {
                 MessageBox.Show($"Virhe hakiessa traktoritietoja: {ex.Message}", "Virhe", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                treeData.EndUpdate();
             }
         }
 
