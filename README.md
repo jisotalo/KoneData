@@ -12,6 +12,5 @@ Tech used:
 - XPath
 
 Probably will break if something is changed at the https://konedata.net/
-Created only to be used by me..
 
-
+![image](https://user-images.githubusercontent.com/13457157/136523925-57b44134-ab22-4a5b-a568-c4ecfaf5c6e4.png)
